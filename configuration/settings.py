@@ -27,7 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts'
+    'crispy_forms',
+    'posts',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -39,6 +41,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = '/'
 
 ROOT_URLCONF = 'configuration.urls'
 
@@ -61,6 +66,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'configuration.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.User'
 
 
 # Database
