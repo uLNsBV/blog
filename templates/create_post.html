@@ -1,0 +1,18 @@
+{% extends 'base_page.html' %}
+{%load static%}
+{%block logo%}
+<div id="logo">
+  <h1><a href="{%url 'index'%}">Verti</a></h1>
+  <span>by HTML5 UP</span>
+</div>
+{%endblock logo %}
+
+{%load crispy_forms_tags%}
+{% block index %}
+
+<form action='' method='post' enctype="multipart/form-data">
+  {%csrf_token%}
+  {{form|crispy}}
+  <input type="submit" , value="create">
+</form>
+{%endblock%}

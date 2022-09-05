@@ -1,0 +1,20 @@
+{% extends 'base_page.html' %}
+{%block logo%}
+<div id="logo">
+  <h1><a href="{%url 'index'%}">Verti</a></h1>
+  <span>by HTML5 UP</span>
+</div>
+{%endblock logo %}
+
+{%load crispy_forms_tags%}
+{% block index %}
+
+
+<h1>{{post.name}}</h1>
+
+<p>{{post.description}}</p>
+<img src="{{post.image.url}}}"></img>
+<p>{{post.author}}</p>
+
+
+{%endblock%}

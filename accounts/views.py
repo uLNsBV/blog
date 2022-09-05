@@ -12,3 +12,5 @@ class UserCreateView(generic.CreateView):
 
     def get_success_url(self) -> str:
         return reverse('login')
+
+

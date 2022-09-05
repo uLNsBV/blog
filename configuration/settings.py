@@ -67,6 +67,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'configuration.wsgi.application'
 
+LOGIN_REDIRECT_URL = '/'
+
 AUTH_USER_MODEL = 'accounts.User'
 
 
