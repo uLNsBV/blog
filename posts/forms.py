@@ -7,3 +7,7 @@ class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('name', 'description', 'image')
+
+    def form_valid(self, form):
+      form.instance.author = self.request.user
+      return super().form_valid(form)

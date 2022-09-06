@@ -71,3 +71,11 @@ class User(AbstractEmailUser):
             name=self.full_name,
             email=self.email
         )
+
+    def __str__(self) -> str:
+        return '{name}'.format(
+            name=self.full_name
+        )
+
+    def __str__(self):
+        return self.full_name
